@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Sorting Algorithm Visualizer</h1>
+
+<div class="top-controls">
+    <input id="arrayInput" placeholder="Enter array like 5,1,4,2">
+    <button onclick="setArray()">Set Array</button>
+
+    <label>Speed</label>
+    <input type="range" min="100" max="1500" value="700" id="speed">
+
+    <button onclick="toggleDark()">🌙 Dark Mode</button>
+    <button id="voiceBtn" onclick="toggleVoiceUI()">🔊 Voice OFF</button>
+</div>
+
+<div class="step-counter">
+    <strong>Step:</strong> <span id="currentStep">0</span>
+</div>
+
+<div class="controls">
+    <button class="sort-btn" onclick="start('bubble')">Bubble</button>
+    <button class="sort-btn" onclick="start('selection')">Selection</button>
+    <button class="sort-btn" onclick="start('insertion')">Insertion</button>
+    <button class="sort-btn" onclick="start('merge')">Merge</button>
+    <button class="sort-btn" onclick="start('quick')">Quick</button>
+</div>
+
+<div class="controls">
+    <button onclick="pause()">⏸ Pause</button>
+    <button onclick="resume()">▶ Resume</button>
+</div>
+
+<div class="info">
+    <p><b>Input Array:</b> <span id="arrayText"></span></p>
+    <p id="finalResult"></p>
+</div>
+
+<div class="panels">
+    <div>
+        <h3>Visualization</h3>
+        <div id="steps"></div>
+    </div>
+
+    <div class="log-panel">
+        <h3>Step-by-Step Log</h3>
+        <div id="log"></div>
+    </div>
+</div>
+
+<div class="legend">
+    <h3>Legend</h3>
+    <div class="legend-item"><div class="box compare"></div> Comparing</div>
+    <div class="legend-item"><div class="box swap"></div> Swapped</div>
+    <div class="legend-item"><div class="box left-sub"></div> Left Subarray</div>
+    <div class="legend-item"><div class="box right-sub"></div> Right Subarray</div>
+    <div class="legend-item"><div class="box merge-pos"></div> Subarray / Pivot</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

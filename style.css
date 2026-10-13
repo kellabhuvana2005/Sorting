@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.dark {
+    background: #121212;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+.top-controls, .controls {
+    text-align: center;
+    margin: 10px;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+.panels {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#steps {
+    flex: 2;
+}
+
+.log-panel {
+    flex: 1;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.step-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.step-num {
+    width: 70px;
+    font-weight: bold;
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    border: 2px solid #333;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* LIGHT MODE COLORS */
+.compare { background: #ffb347; }
+.swap { background: #ff6961; }
+.left-sub { background: #6fa8dc; }
+.right-sub { background: #93c47d; }
+.merge-pos { background: #c27ba0; }
+
+/* DARK MODE COLORS */
+.dark .box {
+    background: #1f1f1f;
+    border-color: #bbb;
+}
+
+.dark .compare { background: #ff9800; color: #000; }
+.dark .swap { background: #ff5252; color: #000; }
+.dark .left-sub { background: #4fc3f7; color: #000; }
+.dark .right-sub { background: #81c784; color: #000; }
+.dark .merge-pos { background: #ce93d8; color: #000; }
+
+/* Step counter */
+.step-counter {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Legend */
+.legend {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.legend-item .box {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-width: 2px;
+}
